@@ -19,10 +19,11 @@ Contient des infos sur node_js
 
 
 
-### Les bases d'EJS (front)
+## Les bases d'EJS (front)
 
 *******
 
+## Installation EJS
 ``npm install ejs``
 
      app.get('/etage/:etagenum/chambre', function(req, res) {
@@ -38,7 +39,7 @@ Contient des infos sur node_js
     <p>Vous êtes à l'étage n°<%= etage %></p>
     
     
-## Plusieurs paramètres et des boucles
+### Plusieurs paramètres et des boucles
 
 *******
 
@@ -63,12 +64,12 @@ Contient des infos sur node_js
     <%= noms[Math.round(Math.random() * (noms.length - 1))] %>
     </p>
 
-### Les bases node (back)
+## Les bases node (back)
 
 *******
 
 
-## Req et Res
+### Req et Res
 
 *******
 
