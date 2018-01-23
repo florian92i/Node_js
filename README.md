@@ -1,14 +1,6 @@
 # Node_js
 Contient des infos sur node_js
-## Req et Res
 
->La fonction de callback est donc appelée à chaque fois qu'un visiteur se connecte à notre site. Elle prend 2 paramètres :
-
->La requête du visiteur : cet objet contient toutes les informations sur ce que le visiteur a demandé. On y trouve le nom de la page 
->appelée, les paramètres, les éventuels champs de formulaires remplis...
-
-
->La réponse que vous devez renvoyer : c'est cet objet qu'il faut remplir pour donner un retour au visiteur. Au final, res contiendra en >général le code HTML de la page à renvoyer au visiteur.
 
 
 ## NPM
@@ -25,19 +17,7 @@ Contient des infos sur node_js
 
 > NPM va chercher sur les serveurs s'il y a de nouvelles versions des modules, puis mettre à jour les modules installés sur votre machine 
 
-*******
 
-### Les diffents statu
-
-*******
-
-> err: les erreurs
-
-> req: la requête du visiteur
-
-> res: la réponse à renvoyer (la page HTML et les informations d'en-tête)
-
-> next: un callback vers la prochaine fonction à appeler
 
 ### Les bases d'EJS (front)
 
@@ -60,6 +40,8 @@ Contient des infos sur node_js
     
 ## Plusieurs paramètres et des boucles
 
+*******
+
     app.get('/compter/:nombre', function(req, res) {
     var noms = ['Robert', 'Jacques', 'David'];
     res.render('page.ejs', {compteur: req.params.nombre, noms: noms});
@@ -80,3 +62,40 @@ Contient des infos sur node_js
     <p>Tant que j'y suis, je prends un nom au hasard qu'on m'a envoyé :
     <%= noms[Math.round(Math.random() * (noms.length - 1))] %>
     </p>
+
+### Les bases node (back)
+
+*******
+
+
+## Req et Res
+
+*******
+
+>La fonction de callback est donc appelée à chaque fois qu'un visiteur se connecte à notre site. Elle prend 2 paramètres :
+
+>La requête du visiteur : cet objet contient toutes les informations sur ce que le visiteur a demandé. On y trouve le nom de la page 
+>appelée, les paramètres, les éventuels champs de formulaires remplis...
+
+
+>La réponse que vous devez renvoyer : c'est cet objet qu'il faut remplir pour donner un retour au visiteur. Au final, res contiendra en >général le code HTML de la page à renvoyer au visiteur.
+
+### Les diffents statut
+
+*******
+
+> err: les erreurs
+
+> req: la requête du visiteur
+
+> res: la réponse à renvoyer (la page HTML et les informations d'en-tête)
+
+> next: un callback vers la prochaine fonction à appeler
+
+### Middleware niveau application
+
+> ``app.use`` La fonction est exécutée à chaque fois que l’application reçoit une demande.
+
+> ``app.get``  Illustre une route et sa fonction de gestionnaire (système de middleware). La fonction gère les demandes GET 
+
+> ``app.post``  illustre une route et sa fonction de gestionnaire (système de middleware). La fonction gère les demandes POST
