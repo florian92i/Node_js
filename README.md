@@ -27,3 +27,12 @@ Contient des infos sur node_js
 
 *******
 
+### Les diffents statu
+
+> err: les erreurs
+
+> req: la requête du visiteur
+
+> res: la réponse à renvoyer (la page HTML et les informations d'en-tête)
+
+> next: un callback vers la prochaine fonction à appeler
