@@ -29,6 +29,8 @@ Contient des infos sur node_js
 
 ### Les diffents statu
 
+*******
+
 > err: les erreurs
 
 > req: la requête du visiteur
@@ -36,3 +38,45 @@ Contient des infos sur node_js
 > res: la réponse à renvoyer (la page HTML et les informations d'en-tête)
 
 > next: un callback vers la prochaine fonction à appeler
+
+### Les bases d'EJS (front)
+
+*******
+
+``npm install ejs``
+
+     app.get('/etage/:etagenum/chambre', function(req, res) {
+         res.render('chambre.ejs', {etage: req.params.etagenum});
+      });
+
+> Ce code fait appel à un fichier chambre.ejs qui doit se trouver dans un sous-dossier appelé "views". Créez donc un ``fichier/views/``
+
+> Exemple de code html
+
+    <h1>Vous êtes dans la chambre</h1>
+
+    <p>Vous êtes à l'étage n°<%= etage %></p>
+    
+    
+## Plusieurs paramètres et des boucles
+
+    app.get('/compter/:nombre', function(req, res) {
+    var noms = ['Robert', 'Jacques', 'David'];
+    res.render('page.ejs', {compteur: req.params.nombre, noms: noms});
+    });
+    
+> On transmet le nombre envoyé en paramètre et une liste de noms sous forme de tableau. Ensuite, dans le template EJS :
+
+    <h1>Je vais compter jusqu'à <%= compteur %></h1>
+
+    <p><%
+       for(var i = 1 ; i <= compteur ; i++) {
+         %>
+
+    <%= i %>... 
+
+    <% } %></p>
+
+    <p>Tant que j'y suis, je prends un nom au hasard qu'on m'a envoyé :
+    <%= noms[Math.round(Math.random() * (noms.length - 1))] %>
+    </p>
