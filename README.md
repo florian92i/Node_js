@@ -10,8 +10,10 @@ Contient des infos sur node_js
 *******
 
 ``npm install nomdumodule``
+*******
 
 ### Update d'un module
+*******
 
 `` npm update``
 
@@ -38,7 +40,8 @@ Contient des infos sur node_js
 
     <p>Vous êtes à l'étage n°<%= etage %></p>
     
-    
+    *******
+
 ### Plusieurs paramètres et des boucles
 
 *******
@@ -63,6 +66,7 @@ Contient des infos sur node_js
     <p>Tant que j'y suis, je prends un nom au hasard qu'on m'a envoyé :
     <%= noms[Math.round(Math.random() * (noms.length - 1))] %>
     </p>
+*******
 
 ## Les bases node (back)
 
@@ -80,6 +84,7 @@ Contient des infos sur node_js
 
 
 >La réponse que vous devez renvoyer : c'est cet objet qu'il faut remplir pour donner un retour au visiteur. Au final, res contiendra en >général le code HTML de la page à renvoyer au visiteur.
+*******
 
 ### Les diffents statut
 
@@ -92,6 +97,7 @@ Contient des infos sur node_js
 > res: la réponse à renvoyer (la page HTML et les informations d'en-tête)
 
 > next: un callback vers la prochaine fonction à appeler
+*******
 
 ### Middleware niveau application
 
@@ -100,3 +106,4 @@ Contient des infos sur node_js
 > ``app.get``  Illustre une route et sa fonction de gestionnaire (système de middleware). La fonction gère les demandes GET 
 
 > ``app.post``  illustre une route et sa fonction de gestionnaire (système de middleware). La fonction gère les demandes POST
+*******
