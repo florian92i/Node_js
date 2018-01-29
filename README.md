@@ -145,6 +145,6 @@ Contient des infos sur node_js
         console.log('Un client me parle ! Il me dit : ' + message);
     });	
 
-> Les deux mots clées : ``emit`` = envoyer et ``on`` = recevoir
+Les deux mots clées : ``emit`` = envoyer et ``on`` = recevoir
 
 *******
