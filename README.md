@@ -107,3 +107,44 @@ Contient des infos sur node_js
 
 > ``app.post``  illustre une route et sa fonction de gestionnaire (système de middleware). La fonction gère les demandes POST
 *******
+
+# Socket.io
+
+## Envoi et réception de messages
+
+### Le serveur veut envoyer un message au client
+
+> Serveur
+
+     io.sockets.on('connection', function (socket) {
+           socket.emit('message', 'Vous êtes bien connecté !');
+     });
+     
+> Client
+
+     <script>
+          var socket = io.connect('http://localhost:8080');
+          socket.on('message', function(message) {
+               alert('Le serveur a un message pour vous : ' + message);
+          })
+     </script>
+     
+*******
+
+### Le client veut envoyer un message au serveur
+
+> Client 
+
+     $('#poke').click(function () {
+          socket.emit('message', 'Salut serveur, ça va ?');
+     })
+> Serveur 
+
+     // Quand le serveur reçoit un signal de type "message" du client    
+    socket.on('message', function (message) {
+        console.log('Un client me parle ! Il me dit : ' + message);
+    });	
+
+> Les deux mots clées : ``emit`` = envoyer et ``on`` = recevoir
+
+*******
