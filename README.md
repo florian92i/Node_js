@@ -110,6 +110,8 @@ Contient des infos sur node_js
 
 # Socket.io
 
+``npm install socket.io``
+
 ## Envoi et réception de messages
 
 ### Le serveur veut envoyer un message au client
