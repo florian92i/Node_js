@@ -162,7 +162,17 @@ https://scotch.io/tutorials/how-to-deploy-a-node-js-app-to-heroku
 https://stackoverflow.com/questions/14322989/first-heroku-deploy-failed-error-code-h10
 
 
+## Envoyer sur Heroku
+
+``git add --alll``
+
+``git commit -m "cequetuveux"``
+
+``git push heroku master``
+
 
 ## Demarer le projet 
 
 ``heroku open``
+
+
