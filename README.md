@@ -179,3 +179,5 @@ https://stackoverflow.com/questions/14322989/first-heroku-deploy-failed-error-co
 http://psitsmike.com/2011/10/node-js-and-socket-io-multiroom-chat-tutorial/
 
 https://blog.bini.io/developper-un-chat-avec-socket-io-partie-3/
+
+https://socket.io/docs/rooms-and-namespaces/
