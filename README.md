@@ -176,3 +176,5 @@ https://stackoverflow.com/questions/14322989/first-heroku-deploy-failed-error-co
 ``heroku open``
 
 
+http://psitsmike.com/2011/10/node-js-and-socket-io-multiroom-chat-tutorial/
+
